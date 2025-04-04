@@ -1,0 +1,616 @@
+/* Estilos Generales */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    width: 1320px; /* Establecer un ancho fijo */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+nav .menu {
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+nav .menu li a {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav .menu li a:hover {
+    color: #978B5B;
+}
+
+.user-icon .material-icons {
+    font-size: 36px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-icon .material-icons:hover {
+    color: #978B5B;
+}
+
+.hero {
+    background-color: #3E2723;
+    color: #D4C088;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between;
+    padding: 50px;
+    gap: 20px;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 40px;
+    text-align: left; /* Asegura el alineamiento a la izquierda */
+    position: relative; /* Para permitir el subrayado */
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Hero Section - Estilo para imitar el diseño */
+.hero {
+    background-color: #2B1B18; /* Café oscuro */
+    color: #C5A878; /* Dorado/beige */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px;
+    gap: 20px;
+}
+
+/* Contenedor de texto del Hero */
+.hero-text {
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Estilo del título principal */
+.hero-text h1 {
+    font-family: 'Cormorant', serif; /* Fuente elegante */
+    font-size: 50px; /* Tamaño del título */
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Línea decorativa bajo el título */
+.hero-text h1::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #C5A878;
+    margin: 20px auto;
+}
+
+/* Estilo del subtítulo */
+.hero-text h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+/* Estilo del párrafo de bienvenida */
+.hero-text p {
+    font-family: 'Cormorant', serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+/* Estilo para la imagen del pasaporte */
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+/* Sección bienvenida */
+.bienvenida,
+.como-funciona,
+.slider-tiendas,
+.slider-cafes,
+.registro,
+footer {
+    width: 1320px; /* Asegura que todas las secciones tengan el mismo ancho */
+    margin: 0 auto;
+}
+
+/* Sección cómo funciona */
+.como-funciona {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    width: 220px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-item .material-icons {
+    font-size: 48px;
+    color: #3E2723;
+}
+
+/* Añade esto a tu style.css */
+
+/* Estilos para la sección slider-tiendas */
+.slider-tiendas {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.slider-tiendas h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logos-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Separadores */
+.logos-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000; 
+    bottom: 0;
+}
+
+.logos-wrapper img {
+    max-width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+    margin: 0 15px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Añadir separadores entre imágenes */
+.logos-wrapper img:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80x;
+    height: 50px;
+    background-color: #8B4513;
+}
+
+.logos-wrapper img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.20);
+}
+
+
+
+/* Slider Cafés detallado */
+.slider-cafes {
+    padding: 50px 0;
+    background-color: #E0E0E0;
+    position: relative;
+    text-align: center;
+}
+
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    background-color: #E0E0E0;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.slide::before {
+    content: '';
+    background-image: url('/images/Logo Png.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180%;
+    height: 180%;
+    opacity: 0.1;
+}
+
+.slide-img img {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.slide-info {
+    max-width: 600px;
+    z-index: 1;
+    text-align: left;
+}
+
+.slide-info h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.slide-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.slide-info .contacto li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.slide-info button {
+    background-color: #3E2723;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slide-info button:hover {
+    background-color: #978B5B;
+}
+
+.slider-prev,
+.slider-next {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.slider-prev { left: 10px; }
+.slider-next { right: 10px; }
+
+.slider-prev:hover,
+.slider-next:hover {
+    color: #978B5B;
+}
+
+/* Sección Registro */
+.registro {
+    background-color: #3E2723;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    width: 1320px; /* Asegura que el ancho sea consistente con otras secciones */
+    margin: 0 auto; /* Centra la sección */
+    height: auto; /* Ajusta la altura al contenido */
+}
+
+/* Resaltado en el texto */
+.registro .resaltado-cafe {
+    color: #A1887F;
+    font-weight: 600;
+}
+
+.registro .resaltado-comunidad {
+    color: #978B5B;
+    font-weight: 600;
+}
+
+/* Estilos para el botón */
+.registro button {
+    background-color: #A1887F;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.registro button:hover {
+    background-color: #8D6E63;
+}
+/* Sección de Cupones - Versión Simplificada */
+.cupones {
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    text-align: center;
+    color: #ffff;
+    position: relative;
+    margin: 40px auto;
+    width: 1320px;
+}
+
+.cupones-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.cupones h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.cupones p {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.terminos {
+    font-size: 10px;
+    color: #0000;
+    font-style: italic;
+    margin-top: 30px;
+    display: block;
+}
+
+/* Sección de Cupones - Versión Final con Botón Derecha */
+.cupones {
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin: 40px auto;
+    width: 1320px;
+}
+
+.cupones-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.cupones h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.cupones p {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+/* Contenedor del botón alineado a la derecha */
+.cupones-button-container {
+    text-align: right;
+    margin-top: 30px;
+    padding-right: 33px;
+}
+
+.cupones button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cupones button:hover {
+    background-color: #333333;
+}
+
+.terminos {
+    font-size: 8px;
+    color: #757575;
+    font-style: italic;
+    margin-top: 8px;
+    text-align: right;
+    padding-right: 33px;
+    display: block;
+}
+/* Estilo para los términos y condiciones */
+.terminos {
+    font-size: 8px; /* Tamaño muy pequeño como solicitado */
+    color: #0000;
+    font-style: italic;
+    margin-top: 24px;
+    text-align: right; /* Alineado a la derecha */
+    padding-right: 50px; /* Mismo padding que el botón */
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #E8D8B0;
+    color: #000;
+    padding: 40px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo img {
+    max-width: 120px; /* Reducir el tamaño del logo */
+    height: auto; /* Mantener la proporción */
+}
+
+.footer-contact {
+    flex: 2;
+    text-align: left;
+    margin-left: 30px; /* Para separar de los otros elementos */
+}
+
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-contact ul {
+    padding: 0;
+}
+
+.footer-contact ul li {
+    margin-bottom: 8px;
+}
+
+.footer-contact ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-links a {
+    margin-left: 15px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center; /* Centrar el contenido */
+    margin-top: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #000;
+}
+
+.footer-bottom a {
+    margin-left: 15px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}

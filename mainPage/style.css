@@ -557,7 +557,7 @@ footer {
 }
 
 .footer-logo img {
-    max-width: 120px; /* Reducir el tamaño del logo */
+    max-width: 100px; /* Reducir el tamaño del logo */
     height: auto; /* Mantener la proporción */
 }
 
@@ -614,3 +614,11 @@ footer {
     margin-top: 10px;
     display: inline-block;
 }
+
+
+
+
+
+
+
+

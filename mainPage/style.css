@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-    width: 1320px; /* Establecer un ancho fijo */
+    width: 100%; /* Ajuste a 100% para hacerlo responsivo */
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -67,58 +68,31 @@ nav .menu li a:hover {
     color: #978B5B;
 }
 
+/* Hero Section */
 .hero {
-    background-color: #3E2723;
-    color: #D4C088;
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between;
-    padding: 50px;
-    gap: 20px;
-}
-
-.hero-text {
-    flex: 1;
-    padding-right: 40px;
-    text-align: left; /* Asegura el alineamiento a la izquierda */
-    position: relative; /* Para permitir el subrayado */
-}
-
-.hero-text h1 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-}
-
-/* Hero Section - Estilo para imitar el diseño */
-.hero {
-    background-color: #2B1B18; /* Café oscuro */
-    color: #C5A878; /* Dorado/beige */
+    background-color: #2B1B18;
+    color: #C5A878;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 80px 50px;
     gap: 20px;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
 }
 
-/* Contenedor de texto del Hero */
 .hero-text {
     text-align: center;
     max-width: 600px;
 }
 
-/* Estilo del título principal */
 .hero-text h1 {
-    font-family: 'Cormorant', serif; /* Fuente elegante */
-    font-size: 50px; /* Tamaño del título */
+    font-family: 'Cormorant', serif;
+    font-size: 50px;
     line-height: 1.2;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
-/* Línea decorativa bajo el título */
 .hero-text h1::after {
     content: "";
     display: block;
@@ -128,7 +102,6 @@ nav .menu li a:hover {
     margin: 20px auto;
 }
 
-/* Estilo del subtítulo */
 .hero-text h2 {
     font-family: 'Cormorant', serif;
     font-size: 24px;
@@ -136,7 +109,6 @@ nav .menu li a:hover {
     margin-bottom: 25px;
 }
 
-/* Estilo del párrafo de bienvenida */
 .hero-text p {
     font-family: 'Cormorant', serif;
     font-size: 18px;
@@ -144,7 +116,6 @@ nav .menu li a:hover {
     margin-top: 15px;
 }
 
-/* Estilo para la imagen del pasaporte */
 .hero-image img {
     width: 100%;
     max-width: 350px;
@@ -152,19 +123,20 @@ nav .menu li a:hover {
     border-radius: 4px;
 }
 
-
-/* Sección bienvenida */
+/* Secciones de contenido */
 .bienvenida,
 .como-funciona,
 .slider-tiendas,
 .slider-cafes,
 .registro,
-footer {
-    width: 1320px; /* Asegura que todas las secciones tengan el mismo ancho */
+footer,
+.cupones {
+    width: 100%;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
-/* Sección cómo funciona */
+/* Sección Cómo Funciona */
 .como-funciona {
     padding: 60px 0;
     text-align: center;
@@ -188,9 +160,7 @@ footer {
     color: #3E2723;
 }
 
-/* Añade esto a tu style.css */
-
-/* Estilos para la sección slider-tiendas */
+/* Slider logos tiendas */
 .slider-tiendas {
     margin: 50px auto;
     text-align: center;
@@ -208,25 +178,12 @@ footer {
 .logos-wrapper {
     display: flex;
     overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
     padding: 20px 0;
     position: relative;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-}
-
-/* Separadores */
-.logos-wrapper::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #000; 
-    bottom: 0;
 }
 
 .logos-wrapper img {
@@ -236,19 +193,6 @@ footer {
     margin: 0 15px;
     filter: grayscale(100%);
     transition: all 0.3s ease;
-    position: relative;
-}
-
-/* Añadir separadores entre imágenes */
-.logos-wrapper img:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: -15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 80x;
-    height: 50px;
-    background-color: #8B4513;
 }
 
 .logos-wrapper img:hover {
@@ -256,9 +200,7 @@ footer {
     transform: scale(1.20);
 }
 
-
-
-/* Slider Cafés detallado */
+/* Slider Cafés */
 .slider-cafes {
     padding: 50px 0;
     background-color: #E0E0E0;
@@ -271,31 +213,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Esto asegura que solo se vea una diapositiva a la vez */
 }
 
 .slide {
     background-color: #E0E0E0;
     border-radius: 20px;
     padding: 40px;
-    display: flex;
+    display: none; /* Todas las diapositivas estarán ocultas por defecto */
     align-items: center;
     gap: 30px;
     position: relative;
+    opacity: 0; /* Establecer la opacidad a 0 cuando no está activa */
+    transition: opacity 0.5s ease-in-out; /* Transición suave para el cambio de diapositiva */
 }
 
-.slide::before {
-    content: '';
-    background-image: url('/images/Logo Png.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 180%;
-    height: 180%;
-    opacity: 0.1;
+.slide.active {
+    display: flex; /* Mostrar solo la diapositiva activa */
+    opacity: 1; /* Asegura que la diapositiva activa tenga opacidad completa */
 }
 
 .slide-img img {
@@ -320,11 +255,6 @@ footer {
 .slide-info p {
     font-size: 18px;
     margin-bottom: 15px;
-}
-
-.slide-info .contacto li {
-    margin-bottom: 8px;
-    font-size: 16px;
 }
 
 .slide-info button {
@@ -362,6 +292,7 @@ footer {
     color: #978B5B;
 }
 
+
 /* Sección Registro */
 .registro {
     background-color: #3E2723;
@@ -370,9 +301,6 @@ footer {
     text-align: center;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
-    width: 1320px; /* Asegura que el ancho sea consistente con otras secciones */
-    margin: 0 auto; /* Centra la sección */
-    height: auto; /* Ajusta la altura al contenido */
 }
 
 /* Resaltado en el texto */
@@ -397,12 +325,35 @@ footer {
     font-size: 16px;
     margin-top: 25px;
     transition: background-color 0.3s ease;
+    display: inline-block;  /* Asegura que el botón no se estire */
 }
 
+/* Efecto hover para el botón */
 .registro button:hover {
     background-color: #8D6E63;
 }
-/* Sección de Cupones - Versión Simplificada */
+
+
+/* Estilos para el botón de cupones */
+.cupones button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Efecto hover para el botón de cupones */
+.cupones button:hover {
+    background-color: #333333;
+}
+
+/* Sección de Cupones */
 .cupones {
     background-color: #f5f5f5;
     background-size: cover;
@@ -410,10 +361,9 @@ footer {
     background-repeat: no-repeat;
     padding: 60px 0;
     text-align: center;
-    color: #ffff;
+    color: #ffffff;
     position: relative;
     margin: 40px auto;
-    width: 1320px;
 }
 
 .cupones-content {
@@ -450,90 +400,6 @@ footer {
     display: block;
 }
 
-/* Sección de Cupones - Versión Final con Botón Derecha */
-.cupones {
-    background-color: #f5f5f5;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 60px 0;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    margin: 40px auto;
-    width: 1320px;
-}
-
-.cupones-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-.cupones h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    line-height: 1.2;
-}
-
-.cupones p {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #fff;
-    line-height: 1.3;
-    font-weight: 400;
-}
-
-/* Contenedor del botón alineado a la derecha */
-.cupones-button-container {
-    text-align: right;
-    margin-top: 30px;
-    padding-right: 33px;
-}
-
-.cupones button {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.cupones button:hover {
-    background-color: #333333;
-}
-
-.terminos {
-    font-size: 8px;
-    color: #757575;
-    font-style: italic;
-    margin-top: 8px;
-    text-align: right;
-    padding-right: 33px;
-    display: block;
-}
-/* Estilo para los términos y condiciones */
-.terminos {
-    font-size: 8px; /* Tamaño muy pequeño como solicitado */
-    color: #0000;
-    font-style: italic;
-    margin-top: 24px;
-    text-align: right; /* Alineado a la derecha */
-    padding-right: 50px; /* Mismo padding que el botón */
-    display: block;
-}
-
 /* Footer */
 footer {
     background-color: #E8D8B0;
@@ -551,20 +417,14 @@ footer {
     margin: 0 auto;
 }
 
-.footer-logo {
-    flex: 1;
-    text-align: left;
-}
-
 .footer-logo img {
-    max-width: 120px; /* Reducir el tamaño del logo */
-    height: auto; /* Mantener la proporción */
+    max-width: 120px;
 }
 
 .footer-contact {
     flex: 2;
     text-align: left;
-    margin-left: 30px; /* Para separar de los otros elementos */
+    margin-left: 30px;
 }
 
 .footer-contact h3 {
@@ -580,12 +440,6 @@ footer {
     margin-bottom: 8px;
 }
 
-.footer-contact ul li a {
-    color: #000;
-    text-decoration: none;
-    font-size: 16px;
-}
-
 .footer-links {
     flex: 1;
     text-align: right;
@@ -599,7 +453,7 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center; /* Centrar el contenido */
+    text-align: center;
     margin-top: 20px;
     font-size: 14px;
     padding-top: 10px;
@@ -613,4 +467,40 @@ footer {
     text-decoration: none;
     margin-top: 10px;
     display: inline-block;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .slider-tiendas .logos-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .slide {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cupones h2 {
+        font-size: 36px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
 }

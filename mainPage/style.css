@@ -419,6 +419,10 @@ footer {
 
 .footer-logo img {
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> f5f4e72f760e5150616efbabca22be2c4e695861
     max-width: 100px; /* Reducir el tamaño del logo */
     height: auto; /* Mantener la proporción */
 
@@ -471,7 +475,11 @@ footer {
     margin-top: 10px;
     display: inline-block;
 }
+<<<<<<< HEAD
+
+=======
 Alejandro
+>>>>>>> f5f4e72f760e5150616efbabca22be2c4e695861
 /* Media Queries */
 @media (max-width: 768px) {
     .container {
@@ -507,4 +515,7 @@ Alejandro
         align-items: center;
     }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> f5f4e72f760e5150616efbabca22be2c4e695861

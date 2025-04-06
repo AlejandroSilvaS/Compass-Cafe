@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+    /*box-sizing: border-box;*/
+    /*background-color: #E8D8B0;*/
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flecha{
+    align-self: flex-start;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.formulario .mensaje-error{
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.formulario .mensaje-error-activo{
+    display: block;
+}
+
+#grupo__terminos label{
+    display:inline-flex;
+    align-items: center;
+    gap: 10px; 
+    white-space: nowrap;
+    margin-top: 15px;
+}
+
+.grupo__mensaje{ /*Mensaje de error al dar clic en "Registrar"*/
+    height: 45px;
+    line-height: 45px;
+    background: #F66868;
+    padding:0 15px;
+    border-radius: 3px;
+    margin-top: 14px;
+    display: none;
+}
+
+.grupo__mensaje-activo{
+    display: block;
+}
+
+body{
+    background-image: url('imagenes/logopassport.png');
+    background-size: auto;      /* Ajusta la imagen al tamaño del body */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #E8D8B0;   /* Tu color de fondo base */
+}
+
+.descripcionlarga{
+    height: 150px;
+}
+
+.breveDescripcion{
+    height: 100px;
+}
+
+.grupo__botonRegistrar{
+    align-self: center;
+    padding-bottom: 40px;
+}
+
+i{
+    height: 20px;
+    width: 20px;
+}
+
+.boton{
+    display: block;
+    margin: 20px auto;  
+    font-size: 16px;
+    font-weight: bold;
+    background: #050505;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 12px 45px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: .1s erase all;
+}
+
+.boton:hover{
+    box-shadow: 3px 0px 30px rgba(163,163,163,1);
+}
+
+.mensaje-exito{
+    font-size: 15px;
+    color:#119200;
+    margin-top: 0;
+    margin-bottom: 35px;
+    display: none;
+}
+
+.mensaje-exito-activo{
+    display:block;
+}
+
+.formInput{
+    width:100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    background: #FCF3DC;
+    transition: .3s ease all;
+}
+
+.formulario textarea{
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    background: #FCF3DC;
+    resize: none;
+}
+
+.formulario__grupo-correcto textarea{
+    border: 3px solid #119200;
+}
+
+.formulario__grupo-incorrecto textarea{
+    border: 3px solid #bb2929;
+}
+
+.formulario textarea:focus{
+    border: 3px solid #534343;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.formulario .formInput:focus{
+    border: 3px solid #534343;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.etiquetaInput{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+h1,h3{
+    font-family: 'Marcellus SC', serif;
+}
+
+body, label,input,textarea,button{
+    font-family: 'Inter',sans-serif;
+}
+
+.formulario__grupo-correcto .formInput{
+    border: 3px solid #119200;
+}
+
+.formulario__grupo-incorrecto .etiquetaInput{
+    color:#bb2929;
+}
+
+.formulario__grupo-incorrecto .formInput{
+    border: 3px solid #bb2929;
+}
+
+@media only screen and (min-width:1365px) /*Pantalla PC*/
+{
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(12,100px);
+        grid-template-rows: 150px auto;
+    }
+
+    .titulo{
+        grid-column: 2/13;
+        grid-row: 1/2;         
+    }
+    .formulario{
+        grid-column: 4/span 5;
+        grid-row: 2/3; 
+    }
+
+
+}
+
+@media only screen and (max-width:360px) /*Pantalla Celular*/
+{
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(4,70px); 
+        grid-template-rows: 80px auto;
+    }
+
+    h1{
+        font-size: 18px;
+    }
+
+    h3{
+        font-size: 11px;
+    }
+
+    body, label,input,textarea,button{
+        font-size: 11px;
+    }
+
+    .titulo{
+        grid-column: 1/ 5;
+        grid-row: 1/2;      
+        
+        margin-top: 15px;
+        
+    }
+    .formulario{
+        grid-column: 1/5;
+        grid-row: 2/3; 
+
+        margin-left: 15px;
+        
+    }
+
+    .formulario input, .formulario textarea{
+        width: 100%;
+    }
+
+
+    .flecha{
+        margin-left: 5px;
+    }
+
+    .boton{
+        font-size: 12px;
+    }
+
+    .grupo__mensaje{ /*Mensaje de error al dar clic en "Registrar"*/
+        height: 35px;
+        line-height: 35px;
+        padding: 0 5px;
+        border-radius: 3px;
+        margin-top: 14px;
+        font-size: 10px;
+    }
+
+    .formulario .mensaje-error{
+        font-size: 11px;
+    }
+}

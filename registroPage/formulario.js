@@ -202,6 +202,7 @@ formulario.addEventListener('submit',(e)=>{
         });
 
         document.getElementById('grupo__mensaje').classList.remove('grupo__mensaje-activo');
+        window.location.href='http://127.0.0.1:5500/inicioSesionPage/index.html'; //Debe ir a inicio de sesión
     } 
     else {
         document.getElementById('grupo__mensaje').classList.add('grupo__mensaje-activo');

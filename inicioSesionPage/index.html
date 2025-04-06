@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Marcellus+SC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/784b1f5477.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <i class="fa-solid fa-circle-arrow-left fa-2x flecha" aria-hidden="true" title="Last Page"></i>
+        <form class="formulario" id="formulario">
+            <h1>INICIAR SESIÓN</h1>
+
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo">Correo</label>
+                <input class="inputBox" type="email" id="correo" name="correo" placeholder="tucorreo@correo.com">
+                <p class="mensaje-error">El correo solo puede contener letras, números, puntos, guiones y guión bajo.</p>
+            </div>
+            
+            <div class="formulario__grupo" id="grupo__password">
+                <label for="password">Contraseña</label>
+                <input class="inputBox" type="password" name="password" id="password">
+                <p class="mensaje-error">La contraseña debe contener de 4 a 12 dígitos.</p>
+            </div>
+
+            <div class="grupo__mensaje" id="grupo__mensaje">
+                <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Llene los campos correctamente.</p>
+            </div>
+    
+            <input class="btnIngresar" type="submit" name="btnIngresar" id="btnIngresar" value="Ingresar">
+        </form>
+    </div>
+    <script src="validacion.js"></script>
+</body>
+</html>

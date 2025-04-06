@@ -418,7 +418,10 @@ footer {
 }
 
 .footer-logo img {
-    max-width: 120px;
+
+    max-width: 100px; /* Reducir el tamaño del logo */
+    height: auto; /* Mantener la proporción */
+
 }
 
 .footer-contact {
@@ -468,7 +471,7 @@ footer {
     margin-top: 10px;
     display: inline-block;
 }
-
+Alejandro
 /* Media Queries */
 @media (max-width: 768px) {
     .container {
@@ -504,3 +507,4 @@ footer {
         align-items: center;
     }
 }
+

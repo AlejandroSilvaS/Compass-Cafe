@@ -55,7 +55,7 @@ a{
 }
 
 body{
-    background-image: url('imagenes/logopassport.png');
+    background-image: url('../images/logopassport.png');
     background-size: auto;      /* Ajusta la imagen al tamaño del body */
     background-position: center center;
     background-repeat: no-repeat;

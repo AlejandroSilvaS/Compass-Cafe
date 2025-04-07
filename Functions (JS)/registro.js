@@ -6,7 +6,7 @@ const inputsFile = document.querySelectorAll('#formulario input[type="file"]');
 /*Expresiones Regulares*/
 const expresiones={
     user_instagram: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Para bebida y tienda: Letras y espacios, pueden llevar acentos.
+	nombre: /^[a-zA-ZÀ-ÿ\s]{4,40}$/, // Para bebida y tienda: Letras y espacios, pueden llevar acentos.
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	celular: /^3\d{9}$/, // que comience en tres y contenga 10 números
@@ -202,7 +202,7 @@ formulario.addEventListener('submit',(e)=>{
         });
 
         document.getElementById('grupo__mensaje').classList.remove('grupo__mensaje-activo');
-        window.location.href='http://127.0.0.1:5500/inicioSesionPage/index.html'; //Debe ir a inicio de sesión
+        window.location.href='../inicioSesion.html'; //Debe ir a inicio de sesión
     } 
     else {
         document.getElementById('grupo__mensaje').classList.add('grupo__mensaje-activo');

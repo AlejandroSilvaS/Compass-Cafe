@@ -3,12 +3,12 @@
     padding:0;
 }
 
-a{
+.enlaceFlecha{
     grid-column: 2;
     margin-top: 30px;
 }
 
-a .flecha{
+.enlaceFlecha .flecha{
     color:#534343;
 }
 
@@ -17,17 +17,31 @@ a .flecha{
 }
 
 body{
-    /*background-image: url('registroPage/imagenes/logopassport.png');
-    background-size: auto;      /* Ajusta la imagen al tamaño del body 
+    background-image: url('../images/logopassport.png');
+    background-size: 50%;    
     background-position: center center;
-    background-repeat: no-repeat;*/
+    background-repeat: no-repeat;
     background-color: #E8D8B0;   /* Tu color de fondo base */
 }
 
-h1{
+h1,h3{
     align-self: center;
-    margin-bottom: 15px;
     font-family: 'Marcellus SC', serif;
+}
+
+h1{
+    margin-bottom: 5px;
+}
+
+h3{
+    color:#3b2e2e;
+}
+
+.enlaceregistro{
+    align-self: center;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 0;
 }
 
 .formulario label{

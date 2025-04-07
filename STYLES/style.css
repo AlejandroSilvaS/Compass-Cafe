@@ -191,6 +191,51 @@ footer,
     font-size: 48px;
     color: #3E2723;
 }
+/* Estilos Generales */
+.como-funciona {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.como-funciona h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0000;
+    font-family: 'Marcellus SC', serif;
+}
+
+/* Contenedor para los items de la sección */
+.funciona-horizontal {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos de manera horizontal */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en nuevas líneas si es necesario */
+    gap: 30px; /* Espaciado entre los elementos */
+}
+
+/* Estilo para cada item */
+.funciona-item {
+    flex: 1 1 250px; /* Cada item ocupa un 25% del ancho, pero se adapta */
+    text-align: center;
+    padding: 10px;
+}
+
+.funciona-item span {
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.funciona-item h3 {
+    font-size: 20px;
+    color: #0000;
+    margin-bottom: 10px;
+    font-family: 'Marcellus SC', serif;
+}
+
+.funciona-item p {
+    font-size: 16px;
+    color: #000;
+}
 
 /* Slider logos tiendas */
 .slider-tiendas {

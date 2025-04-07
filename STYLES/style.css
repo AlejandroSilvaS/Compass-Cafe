@@ -117,8 +117,11 @@ nav .menu li a:hover {
     max-width: 600px;
 }
 
+h1,h2,h3,h4,h5{
+    font-family: 'Marcellus SC', serif;
+}
+
 .hero-text h1 {
-    font-family: 'Cormorant', serif;
     font-size: 50px;
     line-height: 1.2;
     font-weight: 600;
@@ -135,14 +138,13 @@ nav .menu li a:hover {
 }
 
 .hero-text h2 {
-    font-family: 'Cormorant', serif;
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 25px;
 }
 
 .hero-text p {
-    font-family: 'Cormorant', serif;
+    font-family: 'Inter',sans-serif;
     font-size: 18px;
     line-height: 1.5;
     margin-top: 15px;
@@ -164,7 +166,7 @@ nav .menu li a:hover {
 footer,
 .cupones {
     width: 100%;
-    max-width: 1320px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -244,7 +246,6 @@ footer,
 }
 
 .slider-tiendas h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 30px;
@@ -479,6 +480,7 @@ footer,
 
 /* Footer */
 footer {
+    width: 100%;
     background-color: #E8D8B0;
     color: #000;
     padding: 40px 0;

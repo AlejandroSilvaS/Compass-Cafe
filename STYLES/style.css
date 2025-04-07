@@ -67,6 +67,38 @@ nav .menu li a:hover {
 .user-icon .material-icons:hover {
     color: #978B5B;
 }
+.user-icon {
+    position: relative;
+}
+
+.user-icon .hover-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.user-icon .hover-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.user-icon .hover-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.user-icon:hover .hover-menu {
+    display: block;
+}
 
 /* Hero Section */
 .hero {
@@ -419,10 +451,6 @@ footer {
 
 .footer-logo img {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f5f4e72f760e5150616efbabca22be2c4e695861
     max-width: 100px; /* Reducir el tamaño del logo */
     height: auto; /* Mantener la proporción */
 
@@ -475,11 +503,6 @@ footer {
     margin-top: 10px;
     display: inline-block;
 }
-<<<<<<< HEAD
-
-=======
-Alejandro
->>>>>>> f5f4e72f760e5150616efbabca22be2c4e695861
 /* Media Queries */
 @media (max-width: 768px) {
     .container {
@@ -515,7 +538,3 @@ Alejandro
         align-items: center;
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f5f4e72f760e5150616efbabca22be2c4e695861

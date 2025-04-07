@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
-    <link rel="stylesheet" href="inicioSesion.css">
+    <link rel="stylesheet" href="STYLES/inicioSesion.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Marcellus+SC&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/784b1f5477.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="grid-container">
-        <a href="http://127.0.0.1:5500/mainPage/index.html">
+        <a class="enlaceFlecha" href="index.html">
             <i class="fa-solid fa-circle-arrow-left fa-2x flecha" aria-hidden="true" title="Last Page"></i>
         </a>       
         <form class="formulario" id="formulario">
             <h1>INICIAR SESIÓN</h1>
-
+            <a class="enlaceregistro" href="registro.html">
+                <h3>¿No tienes una cuenta? Regístrate</h3>
+            </a>
             <div class="formulario__grupo" id="grupo__correo">
                 <label for="correo">Correo</label>
                 <input class="inputBox" type="email" id="correo" name="correo" placeholder="tucorreo@correo.com">
@@ -35,6 +37,6 @@
             <input class="btnIngresar" type="submit" name="btnIngresar" id="btnIngresar" value="Ingresar">
         </form>
     </div>
-    <script src="inicioSesion.js"></script>
+    <script src="Functions (JS)/inicioSesion.js"></script>
 </body>
 </html>

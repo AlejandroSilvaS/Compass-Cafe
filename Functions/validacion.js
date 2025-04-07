@@ -55,7 +55,7 @@ formulario.addEventListener('submit',(e)=>{
         });
 
         document.getElementById('grupo__mensaje').classList.remove('grupo__mensaje-activo');
-        window.location.href='http://127.0.0.1:5500/mainPage/index.html';
+        window.location.href='index.html'; //Redirigir a la página de inicio
     } 
     else {
         document.getElementById('grupo__mensaje').classList.add('grupo__mensaje-activo');

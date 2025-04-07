@@ -1,42 +1,55 @@
+/*importando de google fonds la letra*/
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 
-* {
+*{   /*reset basico*/
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+    box-sizing: border-box; /*para aplicar el padding*/
+    text-decoration: none; /*quita las lineas de los enlaces*/
     list-style: none;
 }
 
+
+
+
+/* --- Estilos Generales --- */
 body {
     font-family: 'Marcellus SC', serif;
-    background-color: #f8f3e8;
 }
 
-/* Header */
+/* Estilos del header */
 header {
     width: 100%;
     padding: 10px 5%;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255); /* O el color que prefieras */
 }
 
-.navbar {
+
+
+/* Barra de navegación */
+.navbar {   
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-
-.logo {
-    height: 60px;
+.logo { 
+    height: 60px; /* Ajusta según tu logo */
+}
+/* Navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado entre los elementos */
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
+.nav-links li {
+    display: inline;
 }
 
 .nav-links a {
+    text-decoration: none;
     color: black;
     font-weight: normal;
 }
@@ -45,142 +58,110 @@ header {
     text-decoration: underline;
 }
 
-/* Banner */
-.banner {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #3e3221;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.banner-content h1 {
-    font-size: 36px;
-}
-
-/* Especialidad */
-.especialidad {
-    text-align: center;
-    background-color: #e5d1a7;
-    padding: 50px 30px;
-}
-
-.especialidad h2 {
+/* Usuario */
+.user-icon {
     font-size: 24px;
-    margin-bottom: 20px;
+    color: black;
+    vertical-align: middle;
 }
 
-.especialidad-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.especialidad img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.texto {
-    max-width: 400px;
-    text-align: left;
-}
-
-/* Contacto */
-.contacto {
-    padding: 30px;
-    text-align: center;
-    background: #fff;
-}
-
-.contacto h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.contacto ul {
-    list-style: none;
-}
-
-.contacto li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.contacto i {
-    margin-right: 10px;
-}
 
 /* Footer */
 footer {
-    background-color: #e5d1a7;
-    padding: 50px 30px;
-    text-align: center;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #E8D8B0;
+    color: #000;
+    padding: 40px 0;
+    font-family: 'Inter', sans-serif;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 .footer-logo {
-    max-width: 200px;
-}
-
-.contact-info {
+    flex: 1;
     text-align: left;
 }
 
-.contact-info h3 {
-    font-size: 18px;
+.footer-logo img {
+    max-width: 100px; /* Reducir el tamaño del logo */
+    height: auto; /* Mantener la proporción */
 }
 
-.contact-info p {
+.footer-contact {
+    flex: 2;
+    text-align: left;
+    margin-left: 30px; /* Para separar de los otros elementos */
+}
+
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-contact ul {
+    padding: 0;
+}
+
+.footer-contact ul li {
+    margin-bottom: 8px;
+}
+
+.footer-contact ul li a {
+    color: #000;
+    text-decoration: none;
     font-size: 16px;
 }
 
 .footer-links {
-    margin-top: 15px;
+    flex: 1;
+    text-align: right;
 }
 
 .footer-links a {
-    margin: 0 10px;
+    margin-left: 15px;
     font-size: 16px;
     color: #000;
     text-decoration: none;
 }
 
-hr {
-    margin: 20px 0;
-    border: 0.5px solid #000;
+.footer-bottom {
+    text-align: center; /* Centrar el contenido */
+    margin-top: 20px;
+    font-size: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #000;
 }
 
-.copyright {
-    font-size: 14px;
+.footer-bottom a {
+    margin-left: 15px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .card {
+        max-width: 90%;
+    }
 }

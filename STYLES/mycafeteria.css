@@ -109,7 +109,7 @@ nav .menu li a:hover {
 }
 
 .informacion {
-    background: url('/images/Fondocafelatintería.jpg') no-repeat center center; /* Fondo de imagen */
+    background: url('images/Fondocafelatintería.jpg') no-repeat center center; /* Fondo de imagen */
     background-size: cover; /* Para que cubra todo el área */
     padding: 50px;
     color: white;

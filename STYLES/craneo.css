@@ -109,13 +109,29 @@ nav .menu li a:hover {
 }
 
 .informacion {
-    background: url('images/Fondocraneosacral.jpg') no-repeat center center; /* Fondo de imagen */
-    background-size: cover; /* Para que cubra todo el área */
+    position: relative;
     padding: 50px;
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+
+    background: url('../images/Fondocraneosacral.jpg') no-repeat center center; /* Fondo de imagen */
+    background-size: cover; /* Para que cubra todo el área */    
+}
+
+.informacion::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(233, 227, 227, 0.5); /* Cambia el 0.5 para ajustar opacidad */
+    z-index: 1;
+}
+
+/* Para que el contenido esté encima */
+.informacion > * {
+    position: relative;
+    z-index: 2;
 }
 
 h1 {

@@ -12,8 +12,13 @@
     align-items: center;
 }
 
-a{
+.enlaceicono {
     align-self: flex-start;
+}
+
+.enlaceInicioSesion{
+    text-decoration: none;
+    color: inherit;
 }
 
 .flecha{

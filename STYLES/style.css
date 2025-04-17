@@ -9,8 +9,7 @@ body {
 
 .container {
     width: 100%; /* Ajuste a 100% para hacerlo responsivo */
-    max-width: 1320px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 a {
@@ -38,6 +37,7 @@ nav.container {
 
 nav .logo img {
     height: 50px;
+    margin-left: 30px;
 }
 
 nav .menu {
@@ -62,6 +62,7 @@ nav .menu li a:hover {
     color: #333;
     cursor: pointer;
     transition: color 0.3s ease;
+    margin-right: 30px;
 }
 
 .user-icon .material-icons:hover {
@@ -109,7 +110,7 @@ nav .menu li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 50px;
+    padding: 80px 0 50px;
     gap: 20px;
     flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
 }
@@ -166,9 +167,8 @@ h1,h2,h3,h4,h5{
 .registro,
 footer,
 .cupones {
-    width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
 }
 
 bienvenida{
@@ -220,6 +220,10 @@ bienvenida{
 
 /* Estilo para cada item */
 .funciona-item {
+    min-width: 0;
+    max-width: 300px;
+    box-sizing: border-box;
+    
     flex: 1 1 250px; /* Cada item ocupa un 25% del ancho, pero se adapta */
     text-align: center;
     padding: 10px;
@@ -275,6 +279,12 @@ bienvenida{
     margin: 0 15px;
     filter: grayscale(100%);
     transition: all 0.3s ease;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .logos-wrapper img:hover {
@@ -379,10 +389,16 @@ bienvenida{
 .registro {
     background-color: #3E2723;
     color: #ffffff;
-    padding: 50px 20px;
+    padding: 50px 0 50px 0px;
     text-align: center;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
+    width:100%;
+}
+
+.registro p{
+    max-width: 100%;
+    box-sizing: border-box; 
 }
 
 /* Resaltado en el texto */
@@ -414,7 +430,6 @@ bienvenida{
 .registro button:hover {
     background-color: #8D6E63;
 }
-
 
 /* Estilos para el botón de cupones */
 .cupones button {

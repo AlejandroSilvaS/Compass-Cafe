@@ -5,14 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar información</title>
     <link rel="stylesheet" href="STYLES/editarInfoPage.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Marcellus+SC&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/784b1f5477.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="grid-container">
-        <a href="index.html" class="botonRegresar">
-            <i class="fa-solid fa-circle-arrow-left fa-2x flecha" aria-hidden="true" title="First Page"></i>
-        </a>  
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo Compass">
+            </div>
+            <ul class="menu">
+                <li><a href="cafeteriasNueva.html">Cafeterías</a>
+                <li><a href="myCafeteria.html" clas="li-micafe">Mi cafetería</a>
+            </ul>
+            <div class="user-icon">
+                <a href="#"><span class="material-icons">account_circle</span></a>
+                <div class="hover-menu">
+                    <a href="editarInfoPage.html">Editar mi sitio</a>
+                    <a href="index.html">Cerrar sesión</a>
+                </div>
+            </div>
+        </nav>        
+    </header>
+
+    <div class="grid-container"> 
         <div class="titulo">                  
             <h1>INFORMACIÓN DE TU TIENDA</h1>
         </div>
@@ -29,6 +46,18 @@
                 <label class="etiquetaInput" for="correo">Email</label>
                 <input class="formInput" type="email" id="correo" name="email" value="micorreo@tucorrreo.com" disabled>
                 <p class="mensaje-error">El correo solo puede contener letras, números, puntos, guiones y guión bajo.</p>
+            </div>
+
+            <div class="formulario__grupo" id="grupo__cuentaInstagram">
+                <label class="etiquetaInput" for="cuentaInstagram">Cuenta de Instagram</label>
+                <input class="formInput" type="text" id="cuentaInstagram" name="cuentainstagram" value="mi_cafe">
+                <p class="mensaje-error">La cuenta de usuario debe contener de 4 a 16 dígitos y solo puedo contener letras, números y guión bajo. Escribir sin el @.</p>
+            </div>
+            
+            <div class="formulario__grupo" id="grupo__numeroCelular">
+                <label class="etiquetaInput" for="numeroCel">Número de whattsapp</label>
+                <input class="formInput" type="number" id="numeroCel" name="numeroCelular" value="31233344455">
+                <p class="mensaje-error">El número de whattsapp debe contener 10 números.</p>
             </div>
                 
             <div class="formulario__grupo" id="grupo__nombre__tienda">
@@ -67,19 +96,7 @@
                 <input class="formInput" type="text" id="direccion" name="direccionTienda" value="Cra ... #...">
                 <p class="mensaje-error">Debes ingresar una dirección válida.</p>
             </div>
-            
-            <div class="formulario__grupo" id="grupo__cuentaInstagram">
-                <label class="etiquetaInput" for="cuentaInstagram">Cuenta de Instagram</label>
-                <input class="formInput" type="text" id="cuentaInstagram" name="cuentainstagram" value="mi_cafe">
-                <p class="mensaje-error">La cuenta de usuario debe contener de 4 a 16 dígitos y solo puedo contener letras, números y guión bajo. Escribir sin el @.</p>
-            </div>
-            
-            <div class="formulario__grupo" id="grupo__numeroCelular">
-                <label class="etiquetaInput" for="numeroCel">Número de whattsapp</label>
-                <input class="formInput" type="number" id="numeroCel" name="numeroCelular" value="31233344455">
-                <p class="mensaje-error">El número de whattsapp debe contener 10 números.</p>
-            </div>
-            
+                    
             <div class="formulario__grupo" id="grupo__imagenPortada">
                 <label class="etiquetaInput" for="imagenPortada">Edita la imagen para la portada</label>
                 <input class="formInput imagenPortada" type="file" id="imagenPortada" name="imgPortada">
@@ -109,6 +126,26 @@
         </form>
     </div>
 
-    <script src="Functions/formularioRegistroT.js"></script>
+    <script src="Functions/formularioeditarInfoPage.js"></script>
 </body>
+
+<footer>
+    <div class="footer-content container">
+        <div class="footer-logo">
+            <img src="images/Logo Png.png" alt="Logo Compass">
+        </div>
+        <div class="footer-contact">
+            <h3>Contáctanos</h3>
+            <ul>
+                <li><a href="https://instagram.com/compassdecafe">@compassdecafe</a></li>
+                <li><a href="mailto:pasaportedigital@gmail.com">pasaportedigital@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="politicas.html">Políticas de privacidad</a>
+        <a href="terminos.html">Términos y condiciones</a>
+        <p>© 2025, Pasaporte Compass de Cafés Especiales por UMNG</p>
+    </div>
+</footer>
 </html>

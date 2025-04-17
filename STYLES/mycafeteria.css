@@ -77,6 +77,7 @@ nav .menu li a:hover {
     position: absolute;
     top: 100%;
     right: 0;
+    width: 160px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -86,15 +87,16 @@ nav .menu li a:hover {
 
 .user-icon .hover-menu a {
     display: block;
-    padding: 10px 15px;
+    padding: 12px 20px;
     color: #333;
     text-decoration: none;
     font-size: 14px;
+    line-height: 1.4;
     transition: background-color 0.3s ease;
 }
 
 .user-icon .hover-menu a:hover {
-    background-color: #f5f5f5;
+    background-color: #E8D8B0;
 }
 
 .user-icon:hover .hover-menu {
@@ -124,7 +126,7 @@ nav .menu li a:hover {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 para ajustar opacidad */
+    background-color: rgba(0, 0, 0, 0.6); /* Cambia el 0.5 para ajustar opacidad */
     z-index: 1;
 }
 
@@ -141,7 +143,7 @@ h1 {
     margin: 0;
 }
 
-p {
+.informacion p {
     font-size: 18px;
     color: #FFF;
     line-height: 1.6;
@@ -185,6 +187,7 @@ p {
     color: #4E4E4E;
     font-family: 'Marcellus SC', serif;
     text-decoration: underline; /* Subraya el título */
+    margin-left: 12%;
 }
 
 .cafe-especial {
@@ -231,6 +234,7 @@ hr.linea-divisoria {
     margin-top: 40px;
     text-align: left;
     padding-left: 20px;
+    margin-left: 9%
 }
 
 .contacto h4 {

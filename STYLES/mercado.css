@@ -164,6 +164,7 @@ p {
     color: #4E4E4E;
     font-family: 'Marcellus SC', serif;
     text-decoration: underline; /* Subraya el título */
+    margin-left: 12%;
 }
 
 .cafe-especial {
@@ -210,6 +211,7 @@ hr.linea-divisoria {
     margin-top: 40px;
     text-align: left;
     padding-left: 20px;
+    margin-left: 9%;
 }
 
 .contacto h4 {

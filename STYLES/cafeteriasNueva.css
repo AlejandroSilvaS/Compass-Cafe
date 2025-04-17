@@ -34,7 +34,6 @@ nav.container {
 
 nav .logo img {
     height: 50px;
-    margin-left: 30px;
 }
 
 nav .menu {
@@ -46,7 +45,7 @@ nav .menu {
 
 nav .menu li a {
     color: #333;
-    font-weight: 550;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -59,12 +58,12 @@ nav .menu li a:hover {
     color: #333;
     cursor: pointer;
     transition: color 0.3s ease;
-    margin-right: 30px;
 }
 
 .user-icon .material-icons:hover {
     color: #978B5B;
 }
+
 .user-icon {
     position: relative;
 }
@@ -84,9 +83,9 @@ nav .menu li a:hover {
 
 .user-icon .hover-menu a {
     display: block;
-    padding: 10px 15px;
+    padding: 12px 20px;
     color: #333;
-    /*text-decoration: none;*/
+    text-decoration: none;
     font-size: 14px;
     line-height: 1.4;
     transition: background-color 0.3s ease;
@@ -96,14 +95,8 @@ nav .menu li a:hover {
     background-color: #E8D8B0;
 }
 
-
 .user-icon:hover .hover-menu {
     display: block;
-}
-
-ul{
-    list-style-type: none;
-    gap:0;
 }
 
 /* Hero Section */
@@ -167,7 +160,7 @@ h2 {
     margin: 10px 0;
 }
 
-body p {
+p {
     font-size: 1em;
     color: #666;
 }
@@ -273,8 +266,9 @@ footer {
     margin-top: 10px;
     display: inline-block;
 }
-
-footer p{
-    color:black;
-}
 /* -----Footer------ */
+
+
+
+
+

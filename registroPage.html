@@ -5,24 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de cafetería</title>
     <link rel="stylesheet" href="STYLES/registroPage.css">
-    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Marcellus+SC&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/784b1f5477.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo Compass">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Cafeterias.html">Cafeterías</a>
+                <li><a href="Ediciones.html">Ediciones</a></li>
+            </ul>
+            <div class="user-icon">
+                <a href="#"><span class="material-icons">account_circle</span></a>
+                <div class="hover-menu">
+                    <a href="inicioSesionPage.html">Iniciar Sesión</a>
+                    <a href="registroPage.html">Registrarse</a>
+                </div>
+            </div>
+        </nav>        
+    </header>
+
     <div class="grid-container">
-        <div class="titulo">
-            <a href="index.html">
-                <i class="fa-solid fa-circle-arrow-left fa-2x flecha" aria-hidden="true" title="Last Page"></i>
-            </a>           
-            <h1>REGÍSTRA TU TIENDA</h1>
-            <h3>¿YA TIENES UNA CUENTA?</h3>
+        <div class="background-title">
+            <div class="titulo">       
+                <h1>REGÍSTRA TU TIENDA</h1>
+            </div>
         </div>
+      
         <form class="formulario" id="formulario">
             <!--<img src="imagenes/logopassport.png" alt="Imagen centrada" class="centro-imagen">-->
             
             <div class="formulario__grupo" id="grupo__correo">
-                <label class="etiquetaInput" for="correo">Email</label>
+                <label class="etiquetaInput" for="correo">Correo electrónico</label>
                 <input class="formInput" type="email" id="correo" name="email" placeholder="tucorreo@tucorrreo.com">
                 <p class="mensaje-error">El correo solo puede contener letras, números, puntos, guiones y guión bajo.</p>
             </div>
@@ -32,44 +51,7 @@
                 <input class="formInput" type="number" id="nit" name="nit" placeholder="110002223">
                 <p class="mensaje-error">El NIT solo puede contener nueve (9) dígitos.</p>
             </div>
-            
-            <div class="formulario__grupo" id="grupo__nombre__tienda">
-                <label class="etiquetaInput" for="nombreTienda">Nombre de la tienda</label>
-                <input class="formInput" type="text" id="nombreTienda" name="nombreTienda" placeholder="Nombre de la tienda">
-                <p class="mensaje-error">Esta casilla solo puedo contener letras, números, puntos, guiones y guión bajo. (Máximo 40 carácteres)</p>
-            </div>
-            
-            <div class="formulario__grupo" id="grupo__largeDescripcion">
-                <label class="etiquetaInput" for="largeDescription">Añade una descripción amplia de la tienda</label>
-                <textarea class="largeDescripcion" name="descripcionLarga" id="largeDescripcion" value="Descripcion" placeholder="Desde 1900 estamos ofreciendo 
-                cafe de autor en la ciudad de bogotá..."></textarea>
-                <p class="mensaje-error">Esta casilla debe contener más de 50 palabras.</p>
-            </div>
-            
-            <div class="formulario__grupo" id="grupo__breveDescripcion">
-                <label class="etiquetaInput" for="breveDescripcion">Añade una descripción breve de la tienda</label>
-                <textarea class="breveDescripcion" name="descripcionBreve" id="breveDescripcion" placeholder="No es solo una café, es una experiencia"></textarea>
-                <p class="mensaje-error">Esta casilla debe contener entre 3 a 12 palabras.</p>
-            </div>
-            
-            <div class="formulario__grupo" id="grupo__bebida">
-                <label class="etiquetaInput" for="bebida">Nombre de la bebida especial con la que participarás</label>
-                <input class="formInput" type="text" id="bebida" name="nombreBebida" placeholder="Nombre de la bebida">
-                <p class="mensaje-error">Esta casilla solo puedo contener letras, números, puntos, guiones y guión bajo. (Máximo 40 carácteres)</p>
-            </div>
-            
-            <div class="formulario__grupo" id="grupo__descripcionBebida">
-                <label class="etiquetaInput" for="descripcionBebida">Descripción de la bebida especial</label>
-                <textarea class="descripcionBebida" name="descripcionCafe" id="descripcionBebida" placeholder="Una explosión de sabores recorrera tu paladar al degustar nuestra bebida..."></textarea>
-                <p class="mensaje-error">Esta casilla debe contener entre 10 y 50 palabras.</p>
-            </div>
-           
-            <div class="formulario__grupo" id="grupo__direccion">
-                <label class="etiquetaInput" for="direccion">Dirección de la tienda</label>
-                <input class="formInput" type="text" id="direccion" name="direccionTienda" placeholder="Cra ... #...">
-                <p class="mensaje-error">Debes ingresar una dirección válida.</p>
-            </div>
-            
+
             <div class="formulario__grupo" id="grupo__cuentaInstagram">
                 <label class="etiquetaInput" for="cuentaInstagram">Cuenta de Instagram</label>
                 <input class="formInput" type="text" id="cuentaInstagram" name="cuentainstagram" placeholder="Usuario en instragram">
@@ -81,6 +63,44 @@
                 <input class="formInput" type="number" id="numeroCel" name="numeroCelular" placeholder="31233344455">
                 <p class="mensaje-error">El número de whattsapp debe contener 10 números.</p>
             </div>
+            
+            <div class="formulario__grupo" id="grupo__nombre__tienda">
+                <label class="etiquetaInput" for="nombreTienda">Nombre de la tienda</label>
+                <input class="formInput" type="text" id="nombreTienda" name="nombreTienda" placeholder="Nombre de la tienda">
+                <p class="mensaje-error">Esta casilla solo puedo contener letras, números, puntos, guiones y guión bajo. (Máximo 40 carácteres)</p>
+            </div>
+
+            <div class="formulario__grupo" id="grupo__breveDescripcion">
+                <label class="etiquetaInput" for="breveDescripcion">Escribe una breve descripción de la tienda</label>
+                <textarea class="breveDescripcion" name="descripcionBreve" id="breveDescripcion" placeholder="No es solo una café, es una experiencia"></textarea>
+                <p class="mensaje-error">Esta casilla debe contener entre 3 a 12 palabras.</p>
+            </div>
+            
+            <div class="formulario__grupo" id="grupo__largeDescripcion">
+                <label class="etiquetaInput" for="largeDescription">Escribe una amplia descripción de la tienda</label>
+                <textarea class="largeDescripcion" name="descripcionLarga" id="largeDescripcion" value="Descripcion" placeholder="Desde 1900 estamos ofreciendo 
+                cafe de autor en la ciudad de bogotá..."></textarea>
+                <p class="mensaje-error">Esta casilla debe contener más de 50 palabras.</p>
+            </div>  
+            
+            <div class="formulario__grupo" id="grupo__bebida">
+                <label class="etiquetaInput" for="bebida">Nombre de la bebida especial</label>
+                <input class="formInput" type="text" id="bebida" name="nombreBebida" placeholder="Nombre de la bebida">
+                <p class="mensaje-error">Esta casilla solo puedo contener letras, números, puntos, guiones y guión bajo. (Máximo 40 carácteres)</p>
+            </div>
+            
+            <div class="formulario__grupo" id="grupo__descripcionBebida">
+                <label class="etiquetaInput" for="descripcionBebida">Escribe una breve descripción de la bebida especial</label>
+                <textarea class="descripcionBebida" name="descripcionCafe" id="descripcionBebida" placeholder="Una explosión de sabores recorrera tu paladar al degustar nuestra bebida..."></textarea>
+                <p class="mensaje-error">Esta casilla debe contener entre 10 y 50 palabras.</p>
+            </div>
+           
+            <div class="formulario__grupo" id="grupo__direccion">
+                <label class="etiquetaInput" for="direccion">Dirección de la tienda</label>
+                <input class="formInput" type="text" id="direccion" name="direccionTienda" placeholder="Cra ... #...">
+                <p class="mensaje-error">Debes ingresar una dirección válida.</p>
+            </div>
+            
             
             <div class="formulario__grupo" id="grupo__imagenPortada">
                 <label class="etiquetaInput" for="imagenPortada">Sube una imagen para la portada</label>
@@ -107,14 +127,14 @@
             </div>
             
             <div class="formulario__grupo" id="grupo__confirmarPassword">
-                <label class="etiquetaInput" for="password">Confirma Contraseña</label>
+                <label class="etiquetaInput" for="password">Verificar Contraseña</label>
                 <input class="formInput" type="password" id="passwordConfirm" name="confirmContrasena">
                 <p class="mensaje-error">Ambas contraseñas deben coincidir.</p>
             </div>
             
             <div id="grupo__terminos">              
                 <label>
-                    <input type="checkbox" name="terminos" id="terminos"> Acepto los Términos y Condiciones
+                    <input type="checkbox" name="terminos" id="terminos"> Acepto los <b>Términos y Condiciones</b>
                 </label>                
             </div>
 
@@ -122,13 +142,39 @@
                 <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b>El formulario debe llenarse correctamente.</p>
             </div>
 
-            <div class="grupo__botonRegistrar">
-                <button type="submit" class="boton">Regístrate</button>
+            <div class="grupo__botonRegistrar" id="grupo__botonRegistrar">
+                <button type="submit" class="boton">Regístrarme</button>
                 <p class="mensaje-exito" id="mensaje-exito">Tu registro ha sido exitoso!</p>
+            </div>
+
+            <label class="labelYaCount">¿Ya tienes una cuenta?</label>
+
+            <div class="yacuenta">
+                <a href="inicioSesionPage.html" class="botonToIngreso">Ingresar</a>
             </div>
         </form>
     </div>
 
-    <script src="formulario.js"></script>
+    <script src="Functions (JS)/registro.js"></script>
 </body>
+
+<footer>
+    <div class="footer-content container">
+        <div class="footer-logo">
+            <img src="images/Logo Png.png" alt="Logo Compass">
+        </div>
+        <div class="footer-contact">
+            <h3>Contáctanos</h3>
+            <ul>
+                <li><a href="https://instagram.com/compassdecafe">@compassdecafe</a></li>
+                <li><a href="mailto:pasaportedigital@gmail.com">pasaportedigital@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="politicas.html">Políticas de privacidad</a>
+        <a href="terminos.html">Términos y condiciones</a>
+        <p>© 2025, Pasaporte Compass de Cafés Especiales por UMNG</p>
+    </div>
+</footer>
 </html>

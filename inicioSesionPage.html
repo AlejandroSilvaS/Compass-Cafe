@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="STYLES/inicioSesionPage.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Marcellus+SC&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/784b1f5477.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="grid-container">
-        <a href="index.html">
-            <i class="fa-solid fa-circle-arrow-left fa-2x flecha" aria-hidden="true" title="Last Page"></i>
-        </a>       
-        <form class="formulario" id="formulario">
-            <h1>INICIAR SESIÓN</h1>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo Compass">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Cafeterias.html">Cafeterías</a>
+                <li><a href="Ediciones.html">Ediciones</a></li>
+            </ul>
+            <div class="user-icon">
+                <a href="#"><span class="material-icons">account_circle</span></a>
+                <div class="hover-menu">
+                    <a href="inicioSesionPage.html">Iniciar Sesión</a>
+                    <a href="registroPage.html">Registrarse</a>
+                </div>
+            </div>
+        </nav>        
+    </header>
 
+    <div class="grid-container">   
+        <div class="container-titulo">
+            <h1>INGRESAR</h1>
+        </div>
+        <form class="formulario" id="formulario">
             <div class="formulario__grupo" id="grupo__correo">
-                <label for="correo">Correo</label>
+                <label for="correo">Correo electrónico</label>
                 <input class="inputBox" type="email" id="correo" name="correo" placeholder="tucorreo@correo.com">
                 <p class="mensaje-error">El correo solo puede contener letras, números, puntos, guiones y guión bajo.</p>
             </div>
@@ -31,10 +50,42 @@
             <div class="grupo__mensaje" id="grupo__mensaje">
                 <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Llene los campos correctamente.</p>
             </div>
-    
+            
+            <div class="container-label">
+                <a href="reestablecerContrasena.html" class="olvideLabel">Olvidé mi contraseña</a>
+            </div>
+            
             <input class="btnIngresar" type="submit" name="btnIngresar" id="btnIngresar" value="Ingresar">
+
+            <label class="labelYaCount">¿No tienes una cuenta?</label>
+
+            <div class="yacuenta">
+                <a href="registroPage.html" class="botonToIngreso">Regístrarme</a>
+            </div>
+
         </form>
     </div>
     <script src="Functions/validacion.js"></script>
 </body>
+
+<footer>
+    <div class="footer-content container">
+        <div class="footer-logo">
+            <img src="images/Logo Png.png" alt="Logo Compass">
+        </div>
+        <div class="footer-contact">
+            <h3>Contáctanos</h3>
+            <ul>
+                <li><a href="https://instagram.com/compassdecafe">@compassdecafe</a></li>
+                <li><a href="mailto:pasaportedigital@gmail.com">pasaportedigital@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="politicas.html">Políticas de privacidad</a>
+        <a href="terminos.html">Términos y condiciones</a>
+        <p>© 2025, Pasaporte Compass de Cafés Especiales por UMNG</p>
+    </div>
+</footer>
+
 </html>

@@ -76,6 +76,7 @@ nav .menu li a:hover {
     position: absolute;
     top: 100%;
     right: 0;
+    width: 160px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -89,11 +90,12 @@ nav .menu li a:hover {
     color: #333;
     text-decoration: none;
     font-size: 14px;
+    line-height: 1.4;
     transition: background-color 0.3s ease;
 }
 
 .user-icon .hover-menu a:hover {
-    background-color: #f5f5f5;
+    background-color: #E8D8B0;
 }
 
 .user-icon:hover .hover-menu {
@@ -144,7 +146,7 @@ h1,h2,h3,h4,h5{
 }
 
 .hero-text p {
-    font-family: 'Inter',sans-serif;
+    font-family: 'Marcellus SC',serif;
     font-size: 18px;
     line-height: 1.5;
     margin-top: 15px;
@@ -158,7 +160,6 @@ h1,h2,h3,h4,h5{
 }
 
 /* Secciones de contenido */
-.bienvenida,
 .como-funciona,
 .slider-tiendas,
 .slider-cafes,
@@ -168,6 +169,10 @@ footer,
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+}
+
+bienvenida{
+    max-width: 400px;
 }
 
 /* Sección Cómo Funciona */
@@ -203,7 +208,6 @@ footer,
     font-size: 32px;
     margin-bottom: 20px;
     color: #0000;
-    font-family: 'Marcellus SC', serif;
 }
 
 /* Contenedor para los items de la sección */
@@ -241,7 +245,7 @@ footer,
 
 /* Slider logos tiendas */
 .slider-tiendas {
-    margin: 50px auto;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -414,7 +418,7 @@ footer,
 
 /* Estilos para el botón de cupones */
 .cupones button {
-    background-color: #000000;
+    background-color: #5f504b;
     color: #fff;
     border: none;
     padding: 12px 30px;
@@ -424,6 +428,7 @@ footer,
     transition: background-color 0.3s ease;
     display: inline-block;
     text-align: center;
+    margin-top: 30px;
 }
 
 /* Efecto hover para el botón de cupones */
@@ -433,6 +438,7 @@ footer,
 
 /* Sección de Cupones */
 .cupones {
+    background-image: url('../images/cafe-de-especialidad.jpg');
     background-color: #f5f5f5;
     background-size: cover;
     background-position: center;
@@ -441,7 +447,7 @@ footer,
     text-align: center;
     color: #ffffff;
     position: relative;
-    margin: 40px auto;
+    margin:0;
 }
 
 .cupones-content {
@@ -454,7 +460,7 @@ footer,
 
 .cupones h2 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #ffff;
     font-weight: 700;
     text-transform: uppercase;
@@ -463,11 +469,23 @@ footer,
 }
 
 .cupones p {
+    font-family: 'Marcellus SC',serif;
     font-size: 24px;
     margin-bottom: 10px;
     color: #ffffff;
     line-height: 1.3;
     font-weight: 400;
+}
+
+.cupones::before{
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 0;
 }
 
 .terminos {

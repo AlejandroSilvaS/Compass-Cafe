@@ -122,13 +122,6 @@ ul{
     margin: 0;
 }
 
-/* Texto introductorio */
-.intro-text {
-    text-align: center;
-    font-size: 1em;
-    margin-top: 10px;
-}
-
 /*seccion de cafeterias estilo*/
 .cafeterias {
     display: flex;
@@ -167,7 +160,7 @@ h2 {
     margin: 10px 0;
 }
 
-body p {
+p {
     font-size: 1em;
     color: #666;
 }
@@ -273,8 +266,9 @@ footer {
     margin-top: 10px;
     display: inline-block;
 }
-
-footer p{
-    color:black;
-}
 /* -----Footer------ */
+
+
+
+
+

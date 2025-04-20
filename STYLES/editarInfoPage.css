@@ -387,12 +387,16 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: 20px
     }
-
-
 }
 
-@media only screen and (max-width:360px) /*Pantalla Celular*/
+@media only screen and (max-width:768px) /*Pantalla Celular*/
 {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
     .grid-container{
         display: grid;
         grid-template-columns: repeat(4,1fr); 
@@ -412,21 +416,26 @@ footer {
     }
 
     .titulo{
-        grid-column: 1/ 4;
-        grid-row: 1/2; 
+        grid-column: 1/5;
+        grid-row: 1/2;     
         
-        margin-left: 15px;
-        
-        margin-top: 15px;
-        flex-wrap: wrap;
-        text-align: center;
-        
+        margin-bottom: 10px;
     }
     .formulario{
-        grid-column: 1/4;
+        grid-column: 1/5;
         grid-row: 2/3; 
 
-        margin-left: 15px;      
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #grupo__NIT, #grupo__correo, #grupo__cuentaInstagram,
+    #grupo__numeroCelular{
+        grid-column: span 2;
     }
 
     .formulario input, .formulario textarea{
@@ -472,6 +481,14 @@ footer {
         border-radius: 3px;
         margin-top: 14px;
         font-size: 9px;
+    }
+
+    .grupo__botonRegistrar .boton{
+        margin-bottom: 0;
+    }
+
+    .grupo__botonRegistrar{
+        padding-bottom: 0;
     }
 
 }

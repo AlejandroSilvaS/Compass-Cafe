@@ -462,7 +462,10 @@ img{
     text-align: center;
     color: #ffffff;
     position: relative;
+
     margin:0;
+    width: 100%;
+    height: auto;
 }
 
 .cupones-content {
@@ -584,15 +587,28 @@ footer {
     display: inline-block;
 }
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+{
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
     .container {
         width: 100%;
-        padding: 0 20px;
+        padding: 0;
+
     }
 
     .hero {
         flex-direction: column;
-        padding: 20px;
+        padding: 0;
+    }
+
+    .bienvenida p{
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .hero-text h1 {
@@ -600,8 +616,15 @@ footer {
     }
 
     .slider-tiendas .logos-wrapper {
-        flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .slide-info{
+        margin-left: 15px;
+    }
+
+    .slide-info a, .slide-info li{
+        font-size: 14px;
     }
 
     .slide {
@@ -609,8 +632,54 @@ footer {
         text-align: center;
     }
 
+    .slider-tiendas h2{
+        font-size: 25px;
+    }
+
+    .slide-img img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .slide{
+        padding: 20px;
+    }
+
+    .slider-cafes h3{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .slider-cafes p{
+        font-size: 14px;
+    }
+
+    .slider-cafes{
+        width: 100%;
+    }
+
+    .registro p{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 14px;
+        padding: 15px;
+
+    }
+
+    .registro button{
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
     .cupones h2 {
-        font-size: 36px;
+        font-size: 35px;
+    }
+
+    .cupones p{
+        font-size: 20px;
     }
 
     .footer-content {

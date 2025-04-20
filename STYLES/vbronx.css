@@ -299,9 +299,15 @@ footer {
 }
 /* Media Queries */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
     .container {
         width: 100%;
-        padding: 0 20px;
+        padding: 0;
     }
 
     .hero {

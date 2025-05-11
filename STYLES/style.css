@@ -102,6 +102,28 @@ nav .menu li a:hover {
 .user-icon:hover .hover-menu {
     display: block;
 }
+.alerta-fecha {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 400px;
+    background-color: rgba(255, 230, 230, 0.95); /* fondo translúcido */
+    color: #b30000;
+    padding: 12px 20px;
+    border-left: 5px solid #b30000;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Marcellus SC', serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    animation: fadeIn 0.4s ease-in-out;
+    backdrop-filter: blur(2px); /* efecto de desenfoque detrás */
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
 /* Hero Section */
 .hero {
@@ -410,6 +432,22 @@ img{
 .registro .resaltado-comunidad {
     color: #978B5B;
     font-weight: 600;
+}
+.alerta-fecha {
+    color: #b30000;
+    background-color: #ffe6e6;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #b30000;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Marcellus SC', serif;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Estilos para el botón */

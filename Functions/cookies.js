@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkCookie(nombre) {
         let aceptoCookies = getCookie(nombre);
         if (aceptoCookies) {
-         alert("Welcome again. Cookies set. ");
+         //alert("Welcome again. Cookies set. ");
          cookieBox.style.display ='none';
         } else {
-          alert("No has aceptado cookies.");
+          //alert("No has aceptado cookies.");
         }
     }
 

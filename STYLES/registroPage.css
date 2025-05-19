@@ -321,32 +321,6 @@ body, label,input,textarea,button{
 .formulario__grupo-incorrecto .formInput{
     border: 3px solid #bb2929;
 }
-
-@media only screen and (min-width:1365px) /*Pantalla PC*/
-{
-    .grid-container{
-        display: grid;
-        grid-template-columns: repeat(12,1fr);
-        grid-template-rows: 120px auto;
-    }
-
-    .background-title{    
-        grid-column: 1/13;
-        grid-row: 1/2;         
-    }
-    .formulario{
-        grid-column: 3/-3;
-        grid-row: 2/3; 
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap:3rem;
-
-    }
-
-
-}
-
 /* -----Footer------ */
 footer {
     width: 100%;
@@ -431,54 +405,71 @@ footer {
     margin-top: 10px;
     display: inline-block;
 }
-/* -----Footer------ */
 
-/* -----Media Queries -------*/
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .hero {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .hero-text h1 {
-        font-size: 30px;
-    }
-
-    .slider-tiendas .logos-wrapper {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .slide {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .cupones h2 {
-        font-size: 36px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media only screen and (max-width:360px) /*Pantalla Celular*/
+@media only screen and (min-width:1365px) /*Pantalla PC*/
 {
     .grid-container{
         display: grid;
-        grid-template-columns: repeat(4,70px); 
-        grid-template-rows: 80px auto;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 120px auto;
+    }
+
+    .background-title{    
+        grid-column: 1/13;
+        grid-row: 1/2;         
+    }
+    .formulario{
+        grid-column: 3/-3;
+        grid-row: 2/3; 
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap:3rem;
+    }
+}
+
+@media only screen and (max-width:768px) /*Pantalla Celular*/
+{
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr); 
+        grid-template-rows: 80px auto 10px;
+    }
+
+    .background-title{    
+        grid-column: 1/5;
+        grid-row: 1/2;       
+        margin-bottom: 0;  
+    }
+    .formulario{
+        grid-column: 1/5;
+        grid-row: 2/3; 
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:5px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    #grupo__correo, #grupo__NIT, #grupo__cuentaInstagram,
+    #grupo__numeroCelular, #grupo__password,
+    #grupo__confirmarPassword{
+       grid-column: span 2;
+    }
+
+    .titulo{
+        margin-left: 20px;
     }
 
     h1{
-        font-size: 18px;
+        font-size: 25px;
     }
 
     h3{
@@ -486,31 +477,11 @@ footer {
     }
 
     body, label,input,textarea,button{
-        font-size: 11px;
-    }
-
-    .titulo{
-        grid-column: 1/ 5;
-        grid-row: 1/2;      
-        
-        margin-top: 15px;
-        
-    }
-    .formulario{
-        grid-column: 1/5;
-        grid-row: 2/3; 
-
-        margin-left: 15px;
-        
+        font-size: 14px;
     }
 
     .formulario input, .formulario textarea{
         width: 100%;
-    }
-
-
-    .flecha{
-        margin-left: 5px;
     }
 
     .boton{
@@ -528,5 +499,9 @@ footer {
 
     .formulario .mensaje-error{
         font-size: 11px;
+    }
+
+    footer{
+        margin-top: 10px;
     }
 }

@@ -278,3 +278,12 @@ footer p{
     color:black;
 }
 /* -----Footer------ */
+
+@media (max-width: 768px) 
+{
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+}   

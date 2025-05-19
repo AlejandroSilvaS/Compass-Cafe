@@ -42,7 +42,15 @@
         </div>
         
     </header>
-
+    <section class="cookies-container">
+        <div class="boxed-cookies">
+            <p>Usamos cookies para mejorar tu experiencia y optimizar la  funcionalidad en este 
+                Pasaporte virtual de Cafés Especiales de Bogotá. Al continuar en el sitio aceptas 
+                nuestra Política de Cookies.</p>
+            <a class="btn-aceptar-cookies">ACEPTAR</a>
+            <a class="btn-NO-aceptar-cookies">NO ACEPTAR</a>
+        </div>
+    </section>  
     <section class="bienvenida container">
         <p>
             ¡Bienvenid@ a nuestro pasaporte digital de café!, una invitación a explorar y disfrutar de las maravillas del café especial en Bogotá.
@@ -178,10 +186,9 @@
             </p>
             <button id="btnRegistro">Regístrate</button>
         </section>
-
-<!-- Sección de Cupones  -->
-
-<section class="cupones">
+    </section>   
+    <!-- Sección de Cupones  -->
+    <section class="cupones">
     <div class="cupones-content">
         <h2>CUPONES</h2>
         <p>PARTICIPA Y DEGUSTA LOS CAFÉS DE AUTOR</p>
@@ -192,8 +199,83 @@
             <span class="terminos">*Aplican términos y condiciones</span>
         </div>
     </div>
-</section>
-<!-- Footer -->
+    </section>
+    <script src="Functions/cookies.js"></script>
+</body>  
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const botonRegistro = document.getElementById("btnRegistro");
+        const enlaceRegistro = document.getElementById("enlaceRegistro");
+
+        const fechasHabilitadas = [];
+
+        const inicio = new Date("2025-05-10");
+        const fin = new Date("2025-07-01");
+
+        for (let fecha = new Date(inicio); fecha <= fin; fecha.setDate(fecha.getDate() + 1)) {
+            fechasHabilitadas.push(fecha.toISOString().split("T")[0]);
+        }
+
+        const hoy = new Date();
+        const hoyISO = hoy.toISOString().split("T")[0];
+
+        const proximaFecha = fechasHabilitadas
+            .map(f => new Date(f))
+            .find(f => f > hoy);
+
+        function validarRegistro(e, origen) {
+            if (fechasHabilitadas.includes(hoyISO)) {
+                window.location.href = "inicioSesionPage.html";
+            } else {
+                e.preventDefault();
+
+                const anterior = document.querySelector(".alerta-fecha");
+                if (anterior) anterior.remove();
+
+                const mensaje = document.createElement("div");
+                mensaje.className = "alerta-fecha";
+
+                let texto = `⚠ Hoy (${hoyISO}) no está disponible para registrar tu cafetería. No estamos en temporada de inscripciones.`;
+
+                if (proximaFecha) {
+                    const msPorDia = 1000 * 60 * 60 * 24;
+                    const diasFaltantes = Math.ceil((proximaFecha - hoy) / msPorDia);
+                    const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+                    const fechaFormateada = proximaFecha.toLocaleDateString('es-CO', opciones);
+                    texto += ` La próxima apertura será el ${fechaFormateada} (faltan ${diasFaltantes} día${diasFaltantes > 1 ? 's' : ''}).`;
+                }
+
+                mensaje.textContent = texto;
+
+                let contenedor;
+                if (origen === 'registro') {
+                    contenedor = document.querySelector(".registro");
+                } else if (origen === 'menu') {
+                    contenedor = document.querySelector(".hero");
+                } else {
+                    contenedor = document.body;
+                }
+
+                contenedor.appendChild(mensaje);
+
+                setTimeout(() => {
+                    mensaje.remove();
+                }, 7000);
+            }
+        }
+
+        if (botonRegistro) {
+            botonRegistro.addEventListener("click", (e) => validarRegistro(e, 'registro'));
+        }
+
+        if (enlaceRegistro) {
+            enlaceRegistro.addEventListener("click", (e) => validarRegistro(e, 'menu'));
+        }
+    });
+    </script>
+  
+  <!-- Footer -->
 <footer>
     <div class="footer-content container">
         <div class="footer-logo">
@@ -212,75 +294,6 @@
         <a href="terminos.html">Términos y condiciones</a>
         <p>© 2025, Pasaporte Compass de Cafés Especiales por UMNG</p>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const botonRegistro = document.getElementById("btnRegistro");
-            const enlaceRegistro = document.getElementById("enlaceRegistro");
-        
-            const fechasHabilitadas = [];
-        
-            const inicio = new Date("2025-05-10");
-            const fin = new Date("2025-07-01");
-        
-            for (let fecha = new Date(inicio); fecha <= fin; fecha.setDate(fecha.getDate() + 1)) {
-                fechasHabilitadas.push(fecha.toISOString().split("T")[0]);
-            }
-        
-            const hoy = new Date();
-            const hoyISO = hoy.toISOString().split("T")[0];
-        
-            const proximaFecha = fechasHabilitadas
-                .map(f => new Date(f))
-                .find(f => f > hoy);
-        
-            function validarRegistro(e, origen) {
-                if (fechasHabilitadas.includes(hoyISO)) {
-                    window.location.href = "inicioSesionPage.html";
-                } else {
-                    e.preventDefault();
-        
-                    const anterior = document.querySelector(".alerta-fecha");
-                    if (anterior) anterior.remove();
-        
-                    const mensaje = document.createElement("div");
-                    mensaje.className = "alerta-fecha";
-        
-                    let texto = `⚠ Hoy (${hoyISO}) no está disponible para registrar tu cafetería. No estamos en temporada de inscripciones.`;
-        
-                    if (proximaFecha) {
-                        const msPorDia = 1000 * 60 * 60 * 24;
-                        const diasFaltantes = Math.ceil((proximaFecha - hoy) / msPorDia);
-                        const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
-                        const fechaFormateada = proximaFecha.toLocaleDateString('es-CO', opciones);
-                        texto += ` La próxima apertura será el ${fechaFormateada} (faltan ${diasFaltantes} día${diasFaltantes > 1 ? 's' : ''}).`;
-                    }
-        
-                    mensaje.textContent = texto;
-        
-                    let contenedor;
-                    if (origen === 'registro') {
-                        contenedor = document.querySelector(".registro");
-                    } else if (origen === 'menu') {
-                        contenedor = document.querySelector(".hero");
-                    } else {
-                        contenedor = document.body;
-                    }
-        
-                    contenedor.appendChild(mensaje);
-        
-                    setTimeout(() => {
-                        mensaje.remove();
-                    }, 7000);
-                }
-            }
-        
-            if (botonRegistro) {
-                botonRegistro.addEventListener("click", (e) => validarRegistro(e, 'registro'));
-            }
-        
-            if (enlaceRegistro) {
-                enlaceRegistro.addEventListener("click", (e) => validarRegistro(e, 'menu'));
-            }
-        });
-        </script>
+
+</footer>
         

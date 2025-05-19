@@ -56,7 +56,7 @@ function validarTextarea(idCampo, minPalabras, maxPalabras){
 
 const validarArchivoImagen = (input, campo) => {
     const archivo = input.files[0];
-
+    
     if (archivo){
         const tiposPermitidos = ['image/jpeg', 'image/png', 'image/jpg'];
         if (tiposPermitidos.includes(archivo.type)) {

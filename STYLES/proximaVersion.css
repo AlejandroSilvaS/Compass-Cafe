@@ -168,21 +168,13 @@ nav .menu li a:hover {
 }
 
 .cafe img {
-    width: 100%;
-    height: auto; /* Importante para mantener proporción y evitar recorte */
-    object-fit: contain; /* Asegura que no se recorte la imagen */
-    background-color: #fff; /* Opcional, para fondo blanco */
-    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
+    border-radius: 8px;
 }
-
-
-
-
-  
-
-
 
 
 
